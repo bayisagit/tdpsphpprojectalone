@@ -1,0 +1,154 @@
+header {
+    background-color: #333;
+	color: whitesmoke;
+}
+.header_n{
+	background-color: rgb(79, 10, 190);
+}
+.header-title-line {
+	padding: 0.5rem 0.5rem;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+.active {
+	width: 100%;
+	border-radius: 5px;
+	background-color: rgb(72, 91, 148);
+  }
+.menu-button {
+	background-color: transparent;
+	width: 48px;
+	height: 48px;
+	border: none;
+	display: flex;
+	gap:10px;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.menu-icon{
+	/* position:absolute; */
+    display:block;
+}
+.close-icon{
+	position:relative;
+	display:none;
+}
+.header_n  .fa{
+	font-size: 30px;
+	color: whitesmoke;
+}
+.hero_nav {
+	display: none;
+	transform-origin: top center;
+	animation: showMenu 0.5s ease-in-out forwards;
+	background-color: rgb(79, 10, 190);
+	text-decoration: none;
+}
+.dropdown-content {
+	position: absolute;
+	right: 0px;
+	height: 200px;
+	top: 37px;
+	width: 100%;
+	background-color: rgba(180, 178, 176, 0.7);
+	z-index: 1;
+	display:none;
+	text-decoration: none;
+	flex-direction: column;
+	align-items: center;
+	width: 100px;
+	transition: transform 0.5s ease-in;
+	border-radius: 20px ;
+  }
+  
+  .dropdown:hover .dropdown-content {
+	display:flex;
+	justify-content: space-evenly;
+	
+  }
+  nav {
+    border: none; /* Ensure no border on nav */
+}
+
+@keyframes showMenu {
+	0% {
+		transform: scaleY(0);
+	}
+	80% {
+		transform: scaleY(1.2);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+nav ul {
+	display: flex;
+	flex-flow: column nowrap;
+	list-style-type: none;
+}
+
+nav li {
+	padding: 0.5rem;
+	border-top: none;
+}
+
+nav a {
+	display: block;
+	text-align: center;
+	font-size: 1.5;
+	width: 80%;
+	margin: auto;
+	text-decoration: none;
+}
+
+nav a:any-link {
+	color: whitesmoke;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+	transform: scale(1.2);
+	transition: all 0.2s;
+}
+
+@media screen and (min-width: 750px) {
+	body {
+		background-color:white;
+	}
+	.header_n {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: space-between;
+		padding: 5px;
+	}
+	.menu-button {
+		display: none;
+	}
+	
+	.hero_nav {
+		display: block;
+	}
+	.hero_nav ul,
+	nav li,
+	nav a {
+		display: inline-block;
+	}
+	.hero_nav li {
+		margin-right: 50px;
+		border: none;
+	}
+	.hero_nav a {
+		font-size: 1.2rem;
+		transition: 0.5s ease-in;
+	}
+	.hero_nav a:hover {
+		color: rgb(113, 158, 225);
+	}
+}

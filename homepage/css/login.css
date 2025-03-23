@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #d5d8dc;
+}
+.login-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 100px;
+    background: rgb(207, 217, 216);
+    border-radius: 15px;
+}
+.login-title{
+    color: black;
+    margin-top: 15px;
+}
+.login-options{
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    font-size: 34px;
+    text-decoration: none;
+    justify-content: center;
+    margin: 50px;
+    background: rgb(185, 202, 206);
+    padding: 80px;
+}
+.adminlogin:hover{
+    transform: scale(1.3);
+    font-size: 38px;
+}
+.adminlogin:hover{
+    transform: scale(1.3);
+    font-size: 38px;
+}
+.teacherlogin:hover{
+    transform: scale(1.3);
+    font-size: 38px;
+}
+.studentlogin:hover{
+    transform: scale(1.3);
+    font-size: 38px;
+}
+.familylogin:hover{
+    transform: scale(1.3);
+    font-size: 38px;
+}
+a {
+    text-decoration: none;
+}
+.signup-text{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 29px;
+}
+.adminlogin{
+    padding: 5%;
+    background: #c2bec4;
+}
+.teacherlogin{
+    padding: 5%;
+    background: #d3d2db;
+}
+.studentlogin{
+    padding: 5%;
+    background: #d5d6ce;
+}
+.familylogin{
+    padding: 5%;
+    background: #d5d8dc;
+}
+.hr{
+    background: #4d7e19;
+}
+/* 
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+General Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+ Signup Text 
+.signup-text {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.signup-text a {
+    color: yellow;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background: url("../../images/img.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+} 
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+} 
+
+.main >div {
+    width: 100%;
+    margin: 100px;
+} 
+
+.a{
+
+}
+
+form {
+    width: 100%; /* Each form takes full width of its container 
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+form h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {  
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+    font-size: 14.5px;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+} 
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: solid black 1px;
+    outline: none;
+	padding: 15px 40px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+.btn:hover {
+    background: rgb(196, 184, 168);
+}
+
+
+.register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+@media only screen and (max-width: 1003px){
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+
+    }
+    .main >div {
+        width: 60%;
+        margin-left: 50px;
+        margin: 20px;
+    }
+    
+    
+} */ 

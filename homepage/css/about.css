@@ -1,0 +1,121 @@
+*{
+    margin:0px;
+}
+
+.about-text {
+    height:80vh;
+    width:100%;
+    align-items: center;
+    background-image: url("../../images/img8.webp");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.about-text p{
+    color:aquamarine;
+    width:50%;
+    font-size: 200%;
+    padding: 30px; 
+}
+/*main*/
+.main{
+    background-color: #cfd9d8;
+    display:flex;
+}
+.about-us{
+    background-color: #cfd9d8;
+   margin:2% 1% 1% 2%;
+   width:50%;
+   padding:30px;
+   font-size: 16px;
+   background: rgb(248, 247, 247);
+}
+.about-us h1{
+    background-color: #cfd9d8;
+    text-align: center;
+    padding:10px;
+}
+
+
+/*key feature*/
+.key-feautures{
+    width: 100%;
+    align-items: center;
+    background-color: #cfd9d8;
+}
+.key-feautures p{
+    font-size: 26px;
+    padding: 15px;
+    padding-left: 200px;
+}
+.key-feautures ul{
+    background-color: #cfd9d8;
+    list-style:none;    
+}
+.key-feautures li{
+    background-color: #cfd9d8;
+    width: 83%;
+    margin:10px;
+    padding:10px;
+    border-radius: 10px;
+    box-shadow:0px 3px 6px 0px;
+    background: rgb(252, 242, 242);
+}
+.key-feautures li:hover{
+    transform: scale(1.05);
+    list-style:none;    
+}
+/*services*/
+.service-container{
+    width:100%;
+    background-color: #cfd9d8;
+}
+.service-container h1{
+    padding:15px;
+    font-size: 50px;
+    text-decoration: underline green;
+    background-color: #cfd9d8;
+}
+.service,.service2{
+    background-color: #cfd9d8;
+    margin:2px;
+    padding:2% 10%;
+    display:flex;
+    gap:2%;
+    font-size:17px;
+}
+.service .image-large,.service2 .image-large{
+    border-radius:5%;
+    width:45%;
+    height: 40vh;
+}
+@media only screen and (max-width:1003px){
+    .about-text {
+       height:50vh;
+       background-image: url("../../images/img8.webp");
+       background-repeat: no-repeat;
+       background-size:100% 50vh;
+       font-size: 12px;
+    }
+    .about-text p{
+        width:80%;
+    }
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-us{
+        height:30vh;
+        width:70%;
+        overflow:auto;
+    }
+    .service{
+        flex-direction: column;
+    }
+    .service2{
+        flex-direction:column-reverse;
+    }
+    .service .image-large,.service2 .image-large{
+     width:90%;
+    }
+}
