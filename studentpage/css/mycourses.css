@@ -1,0 +1,69 @@
+/* My Courses Section */
+.my-courses {
+    border-left: 5px solid #2196F3;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.my-courses h3 {
+    color: #1976D2;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+/* Course Table Styling */
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.course-table th, 
+.course-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.course-table th {
+    background-color: #2196F3;
+    color: white;
+    font-weight: bold;
+}
+
+.course-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Progress Bar */
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 10px;
+    height: 12px;
+    width: 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #4CAF50;
+    border-radius: 10px;
+}
+
+/* View All Courses Link */
+.my-courses .see-all {
+    display: inline-block;
+    margin-top: 15px;
+    color: #1976D2;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.my-courses .see-all:hover {
+    color: #0D47A1;
+}

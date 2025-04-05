@@ -1,0 +1,151 @@
+/* General Body and Layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Family Announcements Section */
+.family-announcements {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/* Title */
+.family-announcements h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+/* Announcements Card */
+.announcement-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.announcement-header h3 {
+    font-size: 1.5rem;
+    color: #4CAF50;
+}
+
+.announcement-date {
+    font-size: 1rem;
+    color: #777;
+}
+
+.announcement-content {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Comments Section */
+.comments {
+    margin-top: 10px;
+}
+
+.comment {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.comment strong {
+    font-weight: bold;
+}
+
+.comment-form {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.comment-form button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .family-announcements {
+        padding: 20px;
+    }
+
+    .announcement-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .announcement-date {
+        font-size: 0.9rem;
+    }
+
+    .announcement-content {
+        font-size: 0.9rem;
+    }
+
+    .comment-form h3 {
+        font-size: 1.2rem;
+    }
+
+    .comment-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .comment-form button {
+        font-size: 1rem;
+    }
+}

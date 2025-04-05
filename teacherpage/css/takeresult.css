@@ -1,0 +1,83 @@
+/* Section Styling */
+.teacher-results {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.teacher-results h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Table Styling */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.results-table th, .results-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.results-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.results-table td {
+    background-color: #f9f9f9;
+}
+
+.results-table input {
+    width: 80%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.results-table input[type="text"],
+.results-table input[type="number"] {
+    background-color: #fff;
+}
+
+/* Button Styling */
+.btn-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-submit:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .results-table th, .results-table td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .teacher-results h2 {
+        font-size: 1.2rem;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+}

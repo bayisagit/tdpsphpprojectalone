@@ -1,0 +1,90 @@
+/* Teacher Profile Section */
+.teacher-profile {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.teacher-profile h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Profile Container */
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+}
+
+.profile-details {
+    flex-grow: 1;
+}
+
+.profile-details h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.profile-details p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.profile-details strong {
+    color: #333;
+}
+
+/* Button to Edit Profile */
+.btn-edit {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.btn-edit:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-details {
+        text-align: center;
+    }
+
+    .btn-edit {
+        width: 100%;
+    }
+}

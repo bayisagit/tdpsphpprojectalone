@@ -1,0 +1,53 @@
+/* Student Results Section */
+.student-results {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Section Heading */
+.student-results h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Results Table */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fdfdfd;
+}
+
+/* Table Header */
+.results-table thead {
+    background-color: #007bff;
+    color: white;
+}
+
+.results-table th, 
+.results-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Alternating Row Colors */
+.results-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Grade Styling */
+.results-table td strong {
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.results-table tbody tr:hover {
+    background-color: #e0e0e0;
+    transition: 0.3s;
+}

@@ -1,0 +1,91 @@
+/* Profile Section */
+.profile {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.profile h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Profile Container */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Profile Image */
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #ddd;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
+}
+
+/* Profile Details */
+.profile-details {
+    flex-grow: 1;
+}
+
+.profile-details .profile-info {
+    margin-bottom: 15px;
+}
+
+.profile-details .profile-info label {
+    font-weight: bold;
+    color: #333;
+}
+
+.profile-details .profile-info span {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Edit Button */
+.edit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-details {
+        text-align: center;
+    }
+
+    .edit-btn {
+        width: 100%;
+    }
+}
