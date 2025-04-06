@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="partials/admin.css">
     <link rel="stylesheet" type="text/css" href="css/addteacher.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Admin Dashboard</title>
+    <title>Admin Dashboard - add teacher</title>
 </head>
 <body>
     <?php
@@ -17,7 +17,7 @@
             <h2>Register New Teacher</h2>
             <div class="central">
                 <div class="phot"><img src="../images/studentregister.jpeg" alt="teacherregister"> </div>
-                <form action="process_addteacher.php" method="POST">
+                <form action="process/addteacher.php" method="POST">
                     <div class="form-group">
                         <label for="firstname">First Name:</label>
                         <input type="text" id="firstname" name="firstname" required>

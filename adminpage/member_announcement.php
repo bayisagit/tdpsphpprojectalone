@@ -16,8 +16,7 @@
             <h2>Post Member Announcement</h2>
             <div class="central">
                 <div class="phot"><img src="../images/announcement.png" alt="announcement"> </div>
-                <form action="process_add_announcement.php" method="POST">
-                    <!-- Select Audience -->
+                <form action="process/member_announcement.php" method="POST">
                     <div class="form-group">
                         <label for="audience">Select Audience:</label>
                         <select id="audience" name="audience" required>
@@ -28,19 +27,16 @@
                         </select>
                     </div>
 
-                    <!-- Announcement Title -->
                     <div class="form-group">
                         <label for="title">Title:</label>
                         <input type="text" id="title" name="title" required>
                     </div>
 
-                    <!-- Announcement Content -->
                     <div class="form-group">
                         <label for="content">Announcement Content:</label>
                         <textarea id="content" name="content" rows="7" required></textarea>
                     </div>
 
-                    <!-- Submit Button -->
                     <div class="form-group">
                         <button type="submit" class="btn-submit">Post Announcement</button>
                     </div>

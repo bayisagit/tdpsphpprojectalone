@@ -68,14 +68,14 @@
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
-    border-color: #27ae60;
+    border-color: #3f46c9;
     box-shadow: 0 0 8px rgba(39, 174, 96, 0.4);
 }
 
 /* Button Styling */
 .btn-submit {
     display: block;
-    background: #27ae60;
+    background: #554fcb;
     color: white;
     font-size: 18px;
     padding: 12px;
@@ -90,7 +90,7 @@
 }
 
 .btn-submit:hover {
-    background: #219150;
+    background: #4a4ac1;
 }
 
 /* Error Handling */

@@ -25,7 +25,7 @@ body {
 }
 
 .sidebar ul li {
-    padding: 7px;
+    padding: 10px;
     cursor: pointer;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -53,15 +53,19 @@ body {
 
 .logo h2 {
     font-size: 50px;
-    width: auto;
-    height: auto;
 }
 
 .logo h2 a {
     text-decoration: none;
     color: black;
 }
-
+.logo h2  img{
+    width: 100px;
+    height:80px;
+    border-radius: 50%;
+    object-fit: fill;
+    border: 2px solid white; 
+}
 /* Header */
 header {
     margin-left: 18%;

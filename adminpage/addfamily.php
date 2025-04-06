@@ -16,7 +16,7 @@
             <h2>Register New Family</h2>
             <div class="central">
                 <div class="phot"><img src="../images/familyregister.jpg" alt="familyregister"> </div>
-                <form action="process_addfamily.php" method="POST">
+                <form action="process/addfamily.php" method="POST">
                     <!-- First Name -->
                     <div class="form-group">
                         <label for="firstname">First Name:</label>

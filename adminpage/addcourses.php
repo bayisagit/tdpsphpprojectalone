@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/addcourses.css">
 	<link rel="stylesheet" href="partials/admin.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Admin Dashboard</title>
+    <title>Admin Dashboard - register course</title>
 </head>
 <body>
     <?php
@@ -16,7 +16,7 @@
         <section class="add-course-form">
             <h2>Add New Course</h2>
             <div class="central">
-                <form action="process_addcourse.php" method="POST">
+                <form action="process/addcourse.php" method="POST">
                     <div class="form-group">
                         <label for="course_name">Course Name:</label>
                         <input type="text" id="course_name" name="course_name" required>
@@ -35,7 +35,6 @@
                             <option value="History">History</option>
                             <option value="Geography">Geography</option>
                             <option value="Art">Art</option>
-                            <!-- Add more subjects as needed -->
                         </select>
                     </div>
                     <div class="form-group">
@@ -47,7 +46,6 @@
                             <option value="Class 3">Class 3</option>
                             <option value="Class 4">Class 4</option>
                             <option value="Class 5">Class 5</option>
-                            <!-- Add more class levels as needed -->
                         </select>
                     </div>
                     <div class="form-group">

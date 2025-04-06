@@ -23,10 +23,6 @@
 						<i class='bx bxs-envelope'></i>
 					</div>
 					<div class="input-box">
-						<input type="password" name="password" placeholder="Password" required>
-						<i class='bx bxs-lock-alt'></i>
-					</div>
-					<div class="input-box">
 						<input type="number" name="id" placeholder="Id" required>
 						<i class='bx bxs-lock-alt'></i>
 					</div>
@@ -35,7 +31,6 @@
 							<input type="checkbox">Remember me
 						</label>
 						<a href="./forgot.php">Forgot password?</a>
-						<a href="signup.php">Admin Registration?</a>
 					</div>
 					<button type="submit" class="btn">Login</button>
 				</form>

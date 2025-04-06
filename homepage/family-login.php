@@ -21,16 +21,6 @@
 						<i class='bx bxs-envelope'></i>
 					</div>
 
-					<div class="input-box">
-						<input type="password" name="password" placeholder="Password" id="password1" required>
-						<i class='bx bxs-lock-alt'></i>
-					</div>
-
-                    <div class="input-box">
-						<input type="number" name="family_id" placeholder="Family ID" id="family_id" required>
-						<i class='bx bxs-user'></i>
-					</div>
-
                     <div class="input-box">
 						<input type="number" name="child_id" placeholder="Your Child ID" id="child_id" required>
 						<i class='bx bxs-child'></i>
@@ -39,7 +29,6 @@
 					<div class="remember-forgot">
 						<label><input type="checkbox"> Remember me</label>
 						<a href="./forgot.php">Forgot password?</a>
-						<a href="signup.php">Family Registration?</a>
 					</div>
 
 					<button type="submit" class="btn">Login</button>

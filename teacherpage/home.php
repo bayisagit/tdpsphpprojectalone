@@ -1,35 +1,38 @@
+<?php
+include('../configure/dbconnection.php');
+
+$teacher_announcements_query = "SELECT * FROM member_announcement WHERE announcement_for = 'Teacher' ORDER BY created_at DESC";
+$teacher_announcements_result = mysqli_query($conn, $teacher_announcements_query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/teacherpage.css">
-	<link rel="stylesheet" href="partials/teacher.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="partials/teacher.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Teacher Dashboard</title>
 </head>
 <body>
-	<?php
-	include("partials/header.php");
-	?>
-	<main class="main-content">
+    <?php include("partials/header.php"); ?>
+
+    <main class="main-content">
         <section class="teacher-dashboard">
             <h2>Teacher Dashboard</h2>
+            
             <div class="teacher-announcements">
                 <h3>Latest Announcements</h3>
-                <ul>
-                    <li>
-                        <p><strong>Class 2 Math Exam</strong> - The Math exam will be held on the 15th of next month. Please prepare your students accordingly.</p>
-                    </li>
-                    <li>
-                        <p><strong>Parent-Teacher Meeting</strong> - The next Parent-Teacher meeting will take place on the 20th. Please prepare the necessary reports.</p>
-                    </li>
-                </ul>
+                <form action="process/announcement.php" method="POST">
+                    <textarea id="teacher-announcement" name="teacher-announcement" rows="4" placeholder="Enter your latest announcement here..." required></textarea>
+                    <button type="submit" class="btn-submit">Post Announcement</button>
+                </form>
             </div>
 
             <div class="assignments">
                 <h3>Assignments</h3>
-                <form action="process_assignment.php" method="POST">
+                <form action="process/assignment.php" method="POST">
                     <div class="form-group">
                         <label for="subject">Subject:</label>
                         <input type="text" id="subject" name="subject" placeholder="Subject" required>
@@ -54,14 +57,27 @@
 
             <div class="admin-news">
                 <h3>News from Admin</h3>
-                <div class="news-item">
-                    <p><strong>New School Policy</strong> - The school has introduced a new policy regarding student attendance. Please review the policy on the school portal.</p>
-                </div>
-                <div class="news-item">
-                    <p><strong>Updated Curriculum</strong> - The curriculum for the upcoming semester has been updated. Make sure to check the new guidelines.</p>
-                </div>
+                <?php
+                if (mysqli_num_rows($teacher_announcements_result) > 0) {
+                    while ($announcement = mysqli_fetch_assoc($teacher_announcements_result)) {
+                        echo "<div class='news-item'>
+                                <p><strong>Announcement:</strong> {$announcement['announcement_content']}</p>
+                              </div>";
+                    }
+                } else {
+                    echo "<p>No announcements available from the admin.</p>";
+                }
+                ?>
+            </div>
+
+            <div class="teacher-comment">
+                <h3>Post a Comment to Admin</h3>
+                <form action="process/comment.php" method="POST">
+                    <textarea id="teacher-comment" name="teacher-comment" rows="4" placeholder="Enter your comment here..." required></textarea>
+                    <button type="submit" class="btn-submit">Post Comment</button>
+                </form>
             </div>
         </section>
-	</main>
+    </main>
 </body>
 </html>
