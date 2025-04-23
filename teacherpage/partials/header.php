@@ -1,3 +1,18 @@
+<?php
+require '../configure/dbconnection.php'; 
+$teacherid = $_SESSION['user_id']; 
+
+$query = "SELECT firstname, middlename, subject FROM teacher WHERE id = ?";
+$stmt = $conn->prepare($query);  
+$stmt->bind_param("i", $teacherid);  
+$stmt->execute(); 
+$result = $stmt->get_result();  
+$row = $result->fetch_assoc();  
+
+$teachername = $row["firstname"] ." ". $row["middlename"];
+$teachersubject = $row["subject"];
+?>
+
 <aside class="sidebar">
     <div class="logo">
         <h2><i class="fa fa-user-graduate fa-3x"></i></h2>
@@ -20,7 +35,10 @@
 	<div class="schol">Welcome To Your Teacher Page</div>
 	<div class="user">
 		<span><i class="fa fa-user"></i>Teacher</span>
-		<button class="logout">Logout</button>
+        <p>Name: <?= htmlspecialchars($teachername) ?></p>
+        <p>ID: <?= htmlspecialchars($teacherid) ?></p>
+        <p>Subject: <?=htmlspecialchars($teachersubject)?></p>
+        <a href="../teacherpage/partials/logout.php" class="logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
 	</div>
 </header>
 

@@ -1,4 +1,11 @@
 <?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ..homepage/login.php");
+    exit();
+}
+?>
+<?php
 require '../configure/dbconnection.php';
 ?>
 <!DOCTYPE html>
@@ -48,7 +55,9 @@ require '../configure/dbconnection.php';
                                 <td>{$row['class']}</td>
                                 <td>
                                     <a href='editstudent.php?id={$row['id']}'><i class='fas fa-edit'></i> Edit</a> |
-                                    <a href='deletestudent.php?id={$row['id']}' onclick=\"return confirm('Are you sure?')\"><i class='fas fa-trash'></i> Delete</a>
+                                    <a href='delete/studentdelete.php?id={$row['id']}&type=student' onclick=\"return confirm('Are you sure you want to delete this student?')\">
+                                        <i class='fas fa-trash'></i> Delete
+                                    </a>
                                 </td>
                             </tr>";
                         }

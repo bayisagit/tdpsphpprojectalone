@@ -1,3 +1,16 @@
+<?php
+require '../configure/dbconnection.php'; 
+$studentid = $_SESSION['user_id']; 
+
+$query = "SELECT firstname,middlename FROM student WHERE id = ?";
+$stmt = $conn->prepare($query);  
+$stmt->bind_param("i", $studentid);  
+$stmt->execute(); 
+$result = $stmt->get_result();  
+$row = $result->fetch_assoc();  
+
+$studentname = $row["firstname"] ." ". $row["middlename"];
+?>
 <aside class="sidebar">
     <div class="logo">
         <h2><i class="fa fa-user-graduate fa-3x"></i></h2>
@@ -24,8 +37,10 @@
 	<div class="schol">Welcome To Your page</div>
 	<div class="user">
 		<span><i class="fa fa-user"></i>student</span>
-		<button class="logout">Logout</button>
+        
+        <p>Name: <?= htmlspecialchars($studentname) ?></p>
+        <p>ID: <?= htmlspecialchars($studentid) ?></p>
+        <a href="../studentpage/partials/logout.php" class="logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
 	</div>
 </header>
-
 

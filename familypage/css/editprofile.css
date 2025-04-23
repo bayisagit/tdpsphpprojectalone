@@ -1,0 +1,78 @@
+/* Heading */
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Success and Error Messages */
+.success {
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.error {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Form Styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #555;
+}
+
+form input[type="email"],
+form input[type="text"],
+form input[type="file"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+form img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Submit Button */
+form button {
+    display: block;
+    width: 100%;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}

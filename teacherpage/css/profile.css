@@ -1,71 +1,89 @@
-/* Teacher Profile Section */
 .teacher-profile {
-    background-color: white;
-    padding: 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin: 20px;
+    background-color: #fff;
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 900px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    transition: all 0.3s ease;
 }
 
 .teacher-profile h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    text-align: center;
 }
 
 /* Profile Container */
 .profile-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
+/* Profile Image */
 .profile-image {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
 }
 
 .profile-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
+/* Profile Details */
 .profile-details {
-    flex-grow: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-size: 1rem;
 }
 
 .profile-details h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: #333;
+    font-size: 1.4rem;
+    margin: 5px 0;
+    color: #34495e;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
 }
 
 .profile-details p {
-    font-size: 1rem;
-    color: #555;
-    margin: 5px 0;
+    color: #444;
+    margin: 4px 0;
+    line-height: 1.5;
 }
 
 .profile-details strong {
-    color: #333;
+    color: #2c3e50;
 }
 
-/* Button to Edit Profile */
-.btn-edit {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+/* Edit Button */
+.edit-btn {
+    align-self: flex-start;
     margin-top: 20px;
+    padding: 12px 24px;
     font-size: 1rem;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.btn-edit:hover {
+.edit-btn:hover {
     background-color: #45a049;
+    transform: scale(1.03);
 }
 
 /* Responsive Design */
@@ -73,18 +91,20 @@
     .profile-container {
         flex-direction: column;
         align-items: center;
-    }
-
-    .profile-image {
-        width: 120px;
-        height: 120px;
-    }
-
-    .profile-details {
         text-align: center;
     }
 
-    .btn-edit {
+    .profile-image {
+        width: 130px;
+        height: 130px;
+    }
+
+    .profile-details {
+        align-items: center;
+    }
+
+    .edit-btn {
         width: 100%;
+        text-align: center;
     }
 }

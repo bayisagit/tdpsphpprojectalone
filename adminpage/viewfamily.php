@@ -1,4 +1,11 @@
 <?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ..homepage/login.php");
+    exit();
+}
+?>
+<?php
 require '../configure/dbconnection.php';
 ?>
 <!DOCTYPE html>
@@ -20,6 +27,7 @@ require '../configure/dbconnection.php';
             <table>
                 <thead>
                     <tr>
+                        <th>Family Id</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Email</th>
@@ -37,6 +45,7 @@ require '../configure/dbconnection.php';
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
                             echo "<tr>
+                                <td>{$row['id']}</td>
                                 <td>{$row['firstname']}</td>
                                 <td>{$row['lastname']}</td>
                                 <td>{$row['email']}</td>
@@ -45,9 +54,7 @@ require '../configure/dbconnection.php';
                                 <td>{$row['student_id']}</td>
                                 <td>
                                     <a href='editfamily.php?id={$row['id']}'><i class='fas fa-edit'></i> Edit</a> | 
-                                    <a href='deletefamily.php?id={$row['id']}' onclick=\"return confirm('Are you sure you want to delete this family record?')\">
-                                        <i class='fas fa-trash-alt'></i> Delete
-                                    </a>
+                                    <a href='delete/deletefamily.php?id={$row['id']}&type=family' onclick=\"return confirm('Are you sure you want to delete this family?')\"><i class='fas fa-trash'></i> Delete</a>
                                 </td>
                             </tr>";
                         }

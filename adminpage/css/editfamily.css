@@ -1,0 +1,83 @@
+/* Edit Family Section */
+.edit-family {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Section Heading */
+.edit-family h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #444;
+    border-bottom: 2px solid #4CAF50; /* Green accent for family */
+    padding-bottom: 10px;
+}
+
+/* Form Styling */
+.edit-family form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-family form label {
+    margin: 10px 0 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+.edit-family form input[type="text"],
+.edit-family form input[type="email"] {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.edit-family form input[type="text"]:focus,
+.edit-family form input[type="email"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Submit Button */
+.edit-family form button {
+    margin-top: 25px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-family form button:hover {
+    background-color: #388E3C;
+}
+
+/* Feedback messages */
+.edit-family p {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .edit-family {
+        padding: 25px;
+    }
+
+    .edit-family form input,
+    .edit-family form button {
+        font-size: 15px;
+    }
+}

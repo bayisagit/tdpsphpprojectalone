@@ -1,68 +1,83 @@
 /* Profile Section */
 .profile {
     background-color: white;
-    padding: 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 900px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Heading */
 .profile h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    text-align: center;
 }
 
 /* Profile Container */
 .profile-container {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 /* Profile Image */
 .profile-picture {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     overflow: hidden;
-    border: 2px solid #ddd;
+    border: 3px solid #4CAF50;
+    flex-shrink: 0;
 }
 
 .profile-picture img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Profile Details */
 .profile-details {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.profile-details .profile-info {
-    margin-bottom: 15px;
-}
-
-.profile-details .profile-info label {
+.profile-info label {
     font-weight: bold;
     color: #333;
+    display: block;
+    margin-bottom: 4px;
 }
 
-.profile-details .profile-info span {
+.profile-info span {
+    display: block;
     font-size: 1rem;
     color: #555;
+    padding: 8px 12px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
 }
 
 /* Edit Button */
 .edit-btn {
-    display: inline-block;
-    padding: 10px 20px;
+    display: block;
+    width: fit-content;
+    padding: 12px 24px;
     background-color: #4CAF50;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+    border-radius: 8px;
+    margin: 30px auto 0;
     font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .edit-btn:hover {
@@ -74,18 +89,20 @@
     .profile-container {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     .profile-picture {
-        width: 120px;
-        height: 120px;
+        width: 140px;
+        height: 140px;
     }
 
     .profile-details {
-        text-align: center;
+        width: 100%;
     }
 
     .edit-btn {
         width: 100%;
+        text-align: center;
     }
 }

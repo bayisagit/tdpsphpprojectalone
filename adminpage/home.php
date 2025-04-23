@@ -1,4 +1,6 @@
 <?php
+session_start();
+if ($_SESSION['user_type'] == "admin"){
 require '../configure/dbconnection.php';
 
 $query_announcements = "SELECT COUNT(*) AS count FROM general_announcement WHERE date_posted >= CURDATE()";
@@ -111,3 +113,10 @@ $important_notices_count = $result_important_notices->fetch_assoc()['count'];
 	</main>
 </body>
 </html>
+<?php
+}
+else{
+	header("Location: ../homepage/login.php");
+	exit();
+}
+?>

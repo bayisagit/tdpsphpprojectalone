@@ -1,19 +1,39 @@
+<?php
+session_start();
+require '../configure/dbconnection.php';
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../homepage/login.php");
+    exit();
+}
+
+$student_id = $_SESSION['user_id'];
+
+$query = $conn->prepare("SELECT subject, mid_exam, assignment, quiz, final_exam, total FROM results WHERE student_id = ?");
+$query->bind_param("i", $student_id);
+$query->execute();
+$result = $query->get_result();
+
+$rows = [];
+while ($row = $result->fetch_assoc()) {
+    $rows[] = $row;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Exam Results</title>
     <link rel="stylesheet" href="css/myresult.css">
     <link rel="stylesheet" href="partials/student.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <?php
-    include("partials/header.php");
-    ?>
+    <?php include("partials/header.php"); ?>
     <main class="main-content">
-    <section class="student-results">
+        <section class="student-results">
             <h2>Your Exam Results</h2>
             <table class="results-table">
                 <thead>
@@ -24,64 +44,25 @@
                         <th>Quiz (10)</th>
                         <th>Final Exam (50)</th>
                         <th>Total (100)</th>
-                        <th>Grade</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Mathematics</td>
-                        <td>18</td>
-                        <td>17</td>
-                        <td>9</td>
-                        <td>45</td>
-                        <td><strong>89</strong></td>
-                        <td><strong>B</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Science</td>
-                        <td>19</td>
-                        <td>18</td>
-                        <td>10</td>
-                        <td>48</td>
-                        <td><strong>95</strong></td>
-                        <td><strong>A</strong></td>
-                    </tr>
-                    <tr>
-                        <td>English</td>
-                        <td>15</td>
-                        <td>14</td>
-                        <td>8</td>
-                        <td>42</td>
-                        <td><strong>79</strong></td>
-                        <td><strong>C</strong></td>
-                    </tr>
-                    <tr>
-                        <td>History</td>
-                        <td>12</td>
-                        <td>16</td>
-                        <td>7</td>
-                        <td>38</td>
-                        <td><strong>73</strong></td>
-                        <td><strong>C</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Geography</td>
-                        <td>16</td>
-                        <td>15</td>
-                        <td>9</td>
-                        <td>44</td>
-                        <td><strong>84</strong></td>
-                        <td><strong>B</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Art</td>
-                        <td>20</td>
-                        <td>19</td>
-                        <td>10</td>
-                        <td>49</td>
-                        <td><strong>98</strong></td>
-                        <td><strong>A</strong></td>
-                    </tr>
+                    <?php if (count($rows) > 0): ?>
+                        <?php foreach ($rows as $row): ?>
+                            <tr>
+                                <td><?= htmlspecialchars($row['subject']) ?></td>
+                                <td><?= htmlspecialchars($row['mid_exam'] ?? 0) ?></td>
+                                <td><?= htmlspecialchars($row['assignment'] ?? 0) ?></td>
+                                <td><?= htmlspecialchars($row['quiz'] ?? 0) ?></td>
+                                <td><?= htmlspecialchars($row['final_exam'] ?? 0) ?></td>
+                                <td><strong><?= htmlspecialchars($row['total'] ?? 0) ?></strong></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <tr>
+                            <td colspan="6">No results found for you yet.</td>
+                        </tr>
+                    <?php endif; ?>
                 </tbody>
             </table>
         </section>

@@ -1,7 +1,7 @@
 <?php
 require '../configure/dbconnection.php'; 
 
-$admin_id = 00001;  
+$admin_id = $_SESSION['user_id']; 
 
 $query = "SELECT image_url FROM admin WHERE id = ?";
 $stmt = $conn->prepare($query);  
@@ -71,6 +71,6 @@ $image_url = $row['image_url'];
     <div class="schol">School Management System</div>
     <div class="user">
         <span><i class="fa fa-user"></i>Admin</span>
-        <button class="logout">Logout</button>
+        <a href="../adminpage/partials/logout.php" class="logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
     </div>
 </header>

@@ -1,12 +1,11 @@
 <?php
-// Include the database connection
+session_start();
+if ($_SESSION['user_type'] == "family"){
 include('../configure/dbconnection.php');
 
-// Fetch Admin Announcements for Family
 $admin_announcements_query = "SELECT * FROM member_announcement WHERE announcement_for = 'Family' ORDER BY created_at DESC";
 $admin_announcements_result = mysqli_query($conn, $admin_announcements_query);
 
-// Fetch Teacher Announcements for Family
 $teacher_announcements_query = "SELECT * FROM teacher_announcements ORDER BY created_at DESC";
 $teacher_announcements_result = mysqli_query($conn, $teacher_announcements_query);
 ?>
@@ -83,3 +82,8 @@ $teacher_announcements_result = mysqli_query($conn, $teacher_announcements_query
     </main>
 </body>
 </html>
+<?php
+} else {
+    header("location: ../homepage/login.php");
+    exit();
+}

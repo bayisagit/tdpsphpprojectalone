@@ -19,7 +19,7 @@
 		    </div>    
 			<div class="login-container">
 					<h1 class="login-title">Welcome to the Login Page</h1>
-					<form action="handle-login.php" method="POST" class="login-form">
+					<form action="handlelogin.php" method="POST" class="login-form">
 						<label for="user_type">Select Your Role:</label>
 						<select name="user_type" id="user_type" required>
 							<option value="">-- Select Role --</option>
@@ -35,7 +35,7 @@
 						<label for="password">Id:</label>
 						<input type="password" id="id" name="id" required placeholder="Id ....">
 
-						<button type="submit"><a href="handle_login.php">Login</a></button>
+						<input type="submit" value="Login"></input>
 					</form>
 				</div>
 			</div>

@@ -1,5 +1,7 @@
 <?php
-include('../configure/dbconnection.php');
+session_start();
+if ($_SESSION['user_type'] == "teacher"){
+require '../configure/dbconnection.php';
 
 $teacher_announcements_query = "SELECT * FROM member_announcement WHERE announcement_for = 'Teacher' ORDER BY created_at DESC";
 $teacher_announcements_result = mysqli_query($conn, $teacher_announcements_query);
@@ -81,3 +83,10 @@ $teacher_announcements_result = mysqli_query($conn, $teacher_announcements_query
     </main>
 </body>
 </html>
+<?php
+}
+else {
+    header("location: ../homepage/login.php");
+    exit();
+}
+?>
