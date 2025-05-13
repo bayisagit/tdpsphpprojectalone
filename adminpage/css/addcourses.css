@@ -108,7 +108,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .add-course-form {
-        width: 95%;
+        width: 90%;
     }
 
     .central {

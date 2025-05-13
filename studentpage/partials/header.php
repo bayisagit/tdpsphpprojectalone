@@ -13,7 +13,7 @@ $studentname = $row["firstname"] ." ". $row["middlename"];
 ?>
 <aside class="sidebar">
     <div class="logo">
-        <h2><i class="fa fa-user-graduate fa-3x"></i></h2>
+        <h2><i class="fa fa-user-graduate iconresponsive"></i></h2>
         <h2><a href="./home.php">TDPS</a></h2>
     </div>
     <ul>
@@ -34,13 +34,20 @@ $studentname = $row["firstname"] ." ". $row["middlename"];
     </ul>
 </aside>
 <header>
+    <div class="navs">
+        <ul class="navss">
+            <li><a href="../homepage/home.php">Home</a></li>
+            <li><a href="../homepage/announcement.php">Announcement</a></li>
+            <li><a href="../homepage/about.php">About</a></li>
+            <li><a href="../studentpage/partials/logout.php" class="logout"><i class="fa fa-sign-out-alt"></i>Logout</a></li>
+        </ul>
+    </div>
 	<div class="schol">Welcome To Your page</div>
 	<div class="user">
 		<span><i class="fa fa-user"></i>student</span>
         
         <p>Name: <?= htmlspecialchars($studentname) ?></p>
         <p>ID: <?= htmlspecialchars($studentid) ?></p>
-        <a href="../studentpage/partials/logout.php" class="logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
 	</div>
 </header>
 

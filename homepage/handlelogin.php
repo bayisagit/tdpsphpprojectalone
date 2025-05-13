@@ -3,7 +3,6 @@ session_start();
 
 require '../configure/dbconnection.php';
 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $userType = mysqli_real_escape_string($conn, $_POST['user_type']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -44,6 +43,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['user_email'] = $user['email'];
         $_SESSION['user_type'] = $userType;
 
+        // Check if "Remember Me" is checked
+        if (isset($_POST['remember_me'])) {
+            // Set cookies for 1 month (30 days)
+            setcookie('user_email', $email, time() + (30 * 24 * 60 * 60), "/");  // 1 month
+            setcookie('user_type', $userType, time() + (30 * 24 * 60 * 60), "/");  // 1 month
+        } else {
+            // Clear cookies if "Remember Me" is not checked
+            setcookie('user_email', '', time() - 3600, "/");
+            setcookie('user_type', '', time() - 3600, "/");
+        }
+
+        // Redirect based on user type
         switch ($userType) {
             case 'admin':
                 header("Location: ../adminpage/home.php");

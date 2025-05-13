@@ -154,7 +154,7 @@
 }
 
 .student-comments textarea {
-    width: 100%;
+    width: 90%;
     height: 150px;
     padding: 10px;
     border: 1px solid #00796B;
@@ -186,3 +186,88 @@
     margin-top: 10px;
 }
 
+/* Small devices (phones, 600px and below) */
+@media screen and (max-width: 600px) {
+    .announcements,
+    .your-progress,
+    .assignments,
+    .student-comments {
+        padding-left: 15px;
+    }
+
+    .announcements h3,
+    .your-progress h3,
+    .assignments h3,
+    .student-comments h3 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .announcement-item,
+    .assignment-item,
+    .progress,
+    .student-comments textarea {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .progress h4,
+    .assignment-item h4,
+    .announcement-item strong {
+        font-size: 1rem;
+    }
+
+    .student-comments textarea {
+        height: 120px;
+    }
+
+    .student-comments button {
+        width: 50%;
+        font-size: 1rem;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+
+    }
+    .main-content {
+        margin-bottom: 10px;
+    }
+
+    .student-comments .error-message {
+        font-size: 0.95rem;
+    }
+}
+
+/* Medium devices (tablets, 601px to 900px) */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .announcements,
+    .your-progress,
+    .assignments,
+    .student-comments {
+        padding-left: 18px;
+    }
+
+    .announcements h3,
+    .your-progress h3,
+    .assignments h3,
+    .student-comments h3 {
+        font-size: 1.5rem;
+    }
+
+    .announcement-item,
+    .assignment-item,
+    .progress {
+        padding: 12px;
+    }
+
+    .student-comments textarea {
+        height: 140px;
+        font-size: 1rem;
+    }
+    .student-comments form{
+        width: 90%;
+    }
+
+    .student-comments button {
+        font-size: 1rem;
+    }
+}

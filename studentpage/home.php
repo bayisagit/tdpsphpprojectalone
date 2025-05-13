@@ -97,7 +97,7 @@ $teacher_announcements_result = mysqli_query($conn, $teacher_announcements_query
             ?>
         </section>
 
-            <section class="student-comments">
+        <section class="student-comments">
             <h3>Leave a Comment</h3>
             <form action="process/submit_comment.php" method="POST">
                 <textarea name="comment_text" rows="4" placeholder="Write your comment here..." required></textarea>

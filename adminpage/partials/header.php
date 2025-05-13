@@ -1,9 +1,8 @@
 <?php
 require '../configure/dbconnection.php'; 
-
 $admin_id = $_SESSION['user_id']; 
 
-$query = "SELECT image_url FROM admin WHERE id = ?";
+$query = "SELECT image_url, firstname, lastname FROM admin WHERE id = ?";
 $stmt = $conn->prepare($query);  
 $stmt->bind_param("i", $admin_id);  
 $stmt->execute(); 
@@ -11,6 +10,8 @@ $result = $stmt->get_result();
 $row = $result->fetch_assoc();  
 
 $image_url = $row['image_url'];  
+$admin_name = $row['firstname'];
+$lastname = $row['lastname'];
 ?>
 
 <aside class="sidebar">
@@ -68,9 +69,17 @@ $image_url = $row['image_url'];
 </aside>
 
 <header>
+    <div class="navs">
+        <ul class="navss">
+            <li><a href="../homepage/home.php">Home</a></li>
+            <li><a href="../homepage/announcement.php">Announcement</a></li>
+            <li><a href="../homepage/about.php">About</a></li>
+            <li><a href="../adminpage/partials/logout.php" class="logout"><i class="fa fa-sign-out-alt"></i>Logout</a></li>
+        </ul>
+    </div>
     <div class="schol">School Management System</div>
     <div class="user">
         <span><i class="fa fa-user"></i>Admin</span>
-        <a href="../adminpage/partials/logout.php" class="logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
+        <span><?= ucfirst(strtolower($admin_name)) . " " . ucfirst(strtolower($lastname)) ?></span>
     </div>
 </header>

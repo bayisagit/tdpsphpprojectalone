@@ -1,0 +1,6 @@
+//
+//require "function.php";
+
+// ✅ Use PATH (server-side path) for requiring PHP files
+//require PATH . "homepage/home.php";
+//

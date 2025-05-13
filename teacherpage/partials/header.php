@@ -13,9 +13,10 @@ $teachername = $row["firstname"] ." ". $row["middlename"];
 $teachersubject = $row["subject"];
 ?>
 
+
 <aside class="sidebar">
     <div class="logo">
-        <h2><i class="fa fa-user-graduate fa-3x"></i></h2>
+        <h2><i class="fa fa-user-graduate iconresponsive"></i></h2>
         <h2><a href="./home.php">TDPS</a></h2>
     </div>
     <ul>
@@ -29,16 +30,26 @@ $teachersubject = $row["subject"];
         <li class="<?= ($current_page == 'takeresult.php') ? 'active' : ''; ?>">
             <i class="fa fa-graduation-cap"></i><a href="takeresult.php"> Take Results</a>
         </li>
+        <li class="<?= ($current_page == 'viewstudent.php') ? 'active' : ''; ?>">
+            <i class="fa fa-eye"></i><a href="viewstudent.php">View Students</a>
+        </li>
     </ul>
 </aside>
 <header>
+    <div class="navs">
+        <ul class="navss">
+            <li><a href="../homepage/home.php">Home</a></li>
+            <li><a href="../homepage/announcement.php">Announcement</a></li>
+            <li><a href="../homepage/about.php">About</a></li>
+            <li><a href="../teacherpage/partials/logout.php" class="logout"><i class="fa fa-sign-out-alt"></i>Logout</a></li>
+        </ul>
+    </div>
 	<div class="schol">Welcome To Your Teacher Page</div>
 	<div class="user">
 		<span><i class="fa fa-user"></i>Teacher</span>
         <p>Name: <?= htmlspecialchars($teachername) ?></p>
         <p>ID: <?= htmlspecialchars($teacherid) ?></p>
         <p>Subject: <?=htmlspecialchars($teachersubject)?></p>
-        <a href="../teacherpage/partials/logout.php" class="logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
 	</div>
 </header>
 

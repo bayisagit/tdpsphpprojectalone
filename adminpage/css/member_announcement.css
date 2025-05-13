@@ -80,6 +80,7 @@ textarea {
 @media (max-width: 768px) {
     .central {
         padding: 20px;
+        max-width: 400px;
     }
 
     .add-family-form h2 {

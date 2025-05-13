@@ -12,7 +12,7 @@
       </div>
       <div class="center">
         <div class="i1">
-          <a href="https://rb.gy/9wc7ix"></a><i class="fa fa-map-marker"></i>
+          <a href="https://www.google.com/maps?q=Tullu+Dimtu,+Addis+Ababa" target="_blank"><i class="fa fa-map-marker"></i></a>
           <p><span>Tullu Dimtu</span><br>Tullu Dimtu, Addis Ababa</p>
         </div>
         <div class="i2">

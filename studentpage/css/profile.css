@@ -68,8 +68,8 @@
 
 /* Edit Button */
 .edit-btn {
+    width: 50%;
     display: block;
-    width: fit-content;
     padding: 12px 24px;
     background-color: #4CAF50;
     color: white;
@@ -102,7 +102,7 @@
     }
 
     .edit-btn {
-        width: 100%;
+        width: 50%;
         text-align: center;
     }
 }

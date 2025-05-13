@@ -1,5 +1,5 @@
 /* Table Container */
-.view-courses-table {
+.view-students-table {
     padding: 20px;
     background: #ffffff;
     border-radius: 10px;
@@ -35,39 +35,12 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
-/* Action Links */
-a {
-    text-decoration: none;
-    color: #3498db;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-/* Small devices (phones, 600px and below) */
+/* Responsive Design */
 @media screen and (max-width: 600px) {
-    .view-courses-table {
+    .view-students-table {
         padding: 10px;
         margin: 10px;
         box-shadow: none;
-    }
-
-    table {
-        font-size: 14px;
-    }
-
-    th, td {
-        padding: 8px;
-    }
-
-    th {
-        font-size: 15px;
-    }
-
-
-    /* Make table scrollable on small screens */
-    .view-courses-table {
         overflow-x: auto;
     }
 
@@ -76,25 +49,10 @@ a:hover {
         width: 100%;
         overflow-x: auto;
         white-space: nowrap;
-    }
-}
-
-/* Medium devices (tablets, 601px to 900px) */
-@media screen and (min-width: 601px) and (max-width: 900px) {
-    .view-courses-table {
-        padding: 15px;
-        margin: 15px;
-    }
-
-    table {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     th, td {
-        padding: 9px;
-    }
-
-    a {
-        font-size: 15px;
+        padding: 8px;
     }
 }

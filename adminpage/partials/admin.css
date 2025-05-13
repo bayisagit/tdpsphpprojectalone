@@ -17,6 +17,38 @@ body {
     height: 100vh;
     position: fixed;
 }
+.navs {
+    background-color: #f4f4f4;
+    padding: 0; /* Remove padding */
+    position: fixed; /* Attach to top */
+    top: 0;
+    right: 0;
+    left: 19%;
+    z-index: 999;
+    margin: 0; 
+}
+
+.navss {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 10px 20px; /* Small padding inside nav for spacing */
+    gap: 20px;
+}
+
+.navss li a {
+    text-decoration: none; /* ✅ Remove underline */
+    color: #333;
+    font-weight: bold;
+    padding: 6px 12px;
+    display: inline-block;
+}
+
+.navss li a:hover {
+    color: #673AB7;
+}
 
 .sidebar ul {
     list-style: none;
@@ -25,7 +57,7 @@ body {
 }
 
 .sidebar ul li {
-    padding: 10px;
+    padding: 8px;
     cursor: pointer;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -75,7 +107,7 @@ header {
 
 .schol {
     display: flex;
-    margin-top: 20px;
+    margin-top: 38px;
     margin-bottom: 20px;
     font-size: 34px;
     padding-left: 400px;
@@ -135,7 +167,7 @@ header {
 
 @media screen and (max-width: 600px) {
     .sidebar {
-        width: 100%;
+        width: 92%;
         height: auto;
         position: relative;
     }
@@ -159,4 +191,21 @@ header {
         padding-left: 0;
         text-align: center;
     }
+    .main-content {
+    margin-left:1%;
+    padding: 0px;
+    flex: 1;
+}
+.navs {
+    background-color: #f4f4f4;
+    padding: 0; /* Remove padding */
+    position: fixed; /* Attach to top */
+    top: 0;
+    right: 0;
+    left: 0%;
+    z-index: 999;
+    margin-bottom: 5px;
+}
+
+
 }

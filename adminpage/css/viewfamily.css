@@ -45,3 +45,56 @@ a {
 a:hover {
     text-decoration: underline;
 }
+/* Small devices (phones, 600px and below) */
+@media screen and (max-width: 600px) {
+    .view-families-table {
+        padding: 10px;
+        margin: 10px;
+        box-shadow: none;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    th {
+        font-size: 15px;
+    }
+
+
+    /* Make table scrollable on small screens */
+    .view-families-table {
+        overflow-x: auto;
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Medium devices (tablets, 601px to 900px) */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .view-families-table {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    table {
+        font-size: 15px;
+    }
+
+    th, td {
+        padding: 9px;
+    }
+
+    a {
+        font-size: 15px;
+    }
+}

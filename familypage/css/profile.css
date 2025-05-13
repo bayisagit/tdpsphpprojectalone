@@ -1,5 +1,5 @@
 /* Profile Section Styling */
-.profile .family-profile{
+.profile {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,4 +63,56 @@
 
 .edit-btn:hover {
     background-color: #45a049;
+}
+@media screen and (max-width: 600px) {
+    .profile .family-profile {
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+
+    .profile h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .profile-details {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .profile-info {
+        padding: 8px;
+    }
+
+    .profile-info label,
+    .profile-info span {
+        font-size: 0.95rem;
+    }
+
+    .edit-btn {
+        width: 50%;
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+
+/* Medium devices (tablets, 601px to 900px) */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .profile .family-profile {
+        padding: 18px;
+    }
+
+    .profile h2 {
+        font-size: 1.8rem;
+    }
+
+    .profile-info label,
+    .profile-info span {
+        font-size: 1rem;
+    }
+
+    .edit-btn {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
 }
