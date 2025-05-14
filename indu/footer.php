@@ -3,11 +3,11 @@
       <div class="left">
         <p>TPSchool</p>
         <div class="links">
-          <a href="../home.php">| Home</a>
-          <a href="announcement.php">| Announcement</a>
-          <a href="../home.php">| Resource</a>
-          <a href="about.php">| About Us</a>
-          <a href="about.php">| Services</a>
+          <a href="home.php">| Home</a>
+          <a href="homepage/announcement.php">| Announcement</a>
+          <a href="home.php">| Resource</a>
+          <a href="homepage/about.php">| About Us</a>
+          <a href="homepage/about.php">| Services</a>
         </div>
       </div>
       <div class="center">

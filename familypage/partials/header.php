@@ -34,7 +34,7 @@ $studentid = $row["student_id"];
 <header>
     <div class="navs">
         <ul class="navss">
-            <li><a href="../homepage/home.php">Home</a></li>
+            <li><a href="../home.php">Home</a></li>
             <li><a href="../homepage/announcement.php">Announcement</a></li>
             <li><a href="../homepage/about.php">About</a></li>
             <li><a href="../familypage/partials/logout.php" class="logout"><i class="fa fa-sign-out-alt"></i>Logout</a></li>

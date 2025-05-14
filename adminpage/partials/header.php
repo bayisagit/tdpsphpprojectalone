@@ -32,7 +32,7 @@ $lastname = $row['lastname'];
         </li>
 
         <li class="<?= ($current_page == 'viewstudent.php') ? 'active' : ''; ?>">
-            <i class="fa fa-users"></i><a href="viewstudent.php"> View Student</a>
+            <i class="fa fa-users"></i><a href="viewstudent.php"> View Students</a>
         </li>
 
         <li class="<?= ($current_page == 'addteacher.php') ? 'active' : ''; ?>">
@@ -40,7 +40,7 @@ $lastname = $row['lastname'];
         </li>
 
         <li class="<?= ($current_page == 'viewteacher.php') ? 'active' : ''; ?>">
-            <i class="fa fa-chalkboard-teacher"></i><a href="viewteacher.php"> View Teacher</a>
+            <i class="fa fa-chalkboard-teacher"></i><a href="viewteacher.php"> View Teachers</a>
         </li>
 
         <li class="<?= ($current_page == 'addcourses.php') ? 'active' : ''; ?>">
@@ -56,7 +56,7 @@ $lastname = $row['lastname'];
         </li>
 
         <li class="<?= ($current_page == 'viewfamily.php') ? 'active' : ''; ?>">
-            <i class="fa fa-user-friends"></i><a href="viewfamily.php"> View Family</a>
+            <i class="fa fa-user-friends"></i><a href="viewfamily.php"> View Familys</a>
         </li>
         <li class="<?= ($current_page == 'general_announcement.php') ? 'active' : ''; ?>">
             <i class="fa fa-bullhorn"></i><a href="general_announcement.php"> General Announcement</a>
@@ -71,7 +71,7 @@ $lastname = $row['lastname'];
 <header>
     <div class="navs">
         <ul class="navss">
-            <li><a href="../homepage/home.php">Home</a></li>
+            <li><a href="../home.php">Home</a></li>
             <li><a href="../homepage/announcement.php">Announcement</a></li>
             <li><a href="../homepage/about.php">About</a></li>
             <li><a href="../adminpage/partials/logout.php" class="logout"><i class="fa fa-sign-out-alt"></i>Logout</a></li>

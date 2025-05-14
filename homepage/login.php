@@ -8,7 +8,7 @@ header("Pragma: no-cache");
 
 // ✅ If already logged in, redirect to homepage
 if (isset($_SESSION['user_type'])) {
-    header("Location: home.php");
+    header("Location: ../home.php");
     exit;
 }
 
@@ -16,7 +16,7 @@ if (isset($_SESSION['user_type'])) {
 if (isset($_COOKIE['user_email']) && isset($_COOKIE['user_type'])) {
     $_SESSION['user_email'] = $_COOKIE['user_email'];
     $_SESSION['user_type'] = $_COOKIE['user_type'];
-    header("Location: home.php");
+    header("Location: ../home.php");
     exit;
 }
 ?>

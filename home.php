@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="icon" href="../images/favicon.png">
-  <link rel="stylesheet" href="./css/home.css">
-  <link rel="stylesheet" href="./css/nav.css">
-  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="homepage/css/home.css">
+  <link rel="stylesheet" href="homepage/css/nav.css">
+  <link rel="stylesheet" href="homepage/css/footer.css">
   <title>TDPSchool</title>
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
-  <?php include ('../shared/header.php')?>
+  <?php include ('indu/header.php')?>
 
   <!--main part-->
   <main>
@@ -21,7 +21,7 @@
       <p>welcome</p>
       <p>Tullu Dimtu Preparatory School</p>
       <p class="span"> Creating the future</p>
-      <a href="./about.php"><button class="button">Explore</button></a>
+      <a href="homepage/about.php"><button class="button">Explore</button></a>
     </div>
     <div class="smallsize">
       <div class="blog_container">
@@ -39,14 +39,14 @@
           Our mission is to develop intellectual,ethical,creativity foundation on our students 
           to create community  for better world.
         </p>
-        <a href="./about.php"><button class="button">Read more</button></a>
+        <a href="homepage/about.php"><button class="button">Read more</button></a>
       </div>
     </div>
 
     <h1 class="news-h1">Latest News</h1>
     <div class="news-container">
       <div class="news">
-        <div class="image"><img  src="../images/img2.avif"  alt="news image "></div>
+        <div class="image"><img  src="images/img2.avif"  alt="news image "></div>
         <div class="text">
           <h3>Supporting Local Community</h3>
             TDPSchool School's student council launches a
@@ -58,7 +58,7 @@
         </div>
       </div>
       <div class="news">
-        <div class="image"><img  src="../images/img4.avif" alt="news image2 "  ></div>
+        <div class="image"><img  src="images/img4.avif" alt="news image2 "  ></div>
         <div class="text">
           <h3>Students Showcase</h3>Students from the science club at TDPS School
           showcase their brilliance at the regional science fair.
@@ -69,7 +69,7 @@
         </div>
       </div>
       <div class="news">
-        <div class="image"><img  src="../images/img3.avif" alt="news image3" ></div>
+        <div class="image"><img  src="images/img3.avif" alt="news image3" ></div>
         <div class="text">
           <h3>Academic Year Announcement</h3>
           We are excited to announce that the new academic year registration for Tullu Dimtu Primary School will soon open!  
@@ -109,13 +109,13 @@
         </form>
       </div>
       <div class="video">
-        <video src="../videos/Community Schools Animation Video.mp4"  alt="more about us" autoplay muted controls></video>
+        <video src="videos/Community Schools Animation Video.mp4"  alt="more about us" autoplay muted controls></video>
       </div>
     </div>
     
   </main>
 
-  <?php include ('../shared/footer.php') ?>
+  <?php include ('indu/footer.php') ?>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
@@ -128,7 +128,7 @@
   var marker = L.marker([8.944992, 38.818742]).addTo(map);
   marker.bindPopup("<b>Tullu Dimtu Square</b><br>Near AASTU, Addis Ababa").openPopup();
 </script>
-  <script src="./js/homepage.js"></script>
-  <script src="./js/home.js"></script>
+  <script src="homepage/js/homepage.js"></script>
+  <script src="homepage/js/home.js"></script>
 </body>
 </html>

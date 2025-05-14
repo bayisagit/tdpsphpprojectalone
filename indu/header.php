@@ -15,34 +15,34 @@ if (session_status() === PHP_SESSION_NONE) {
   <nav class="hero_nav">
     <?php $current_page = basename($_SERVER['PHP_SELF']); ?>
     <ul>
-      <li><a href="../home.php" class="<?= ($current_page == '../home.php') ? 'active' : '' ?>">Home</a></li>
-      <li><a href="announcement.php" class="<?= ($current_page == 'announcement.php') ? 'active' : '' ?>">Announcement</a></li>
-      <li><a href="about.php" class="<?= ($current_page == 'about.php') ? 'active' : '' ?>">About</a></li>
+      <li><a href="home.php" class="<?= ($current_page == 'home.php') ? 'active' : '' ?>">Home</a></li>
+      <li><a href="homepage/announcement.php" class="<?= ($current_page == 'homepage/announcement.php') ? 'active' : '' ?>">Announcement</a></li>
+      <li><a href="homepage/about.php" class="<?= ($current_page == 'homepage/about.php') ? 'active' : '' ?>">About</a></li>
 
       <?php if (isset($_SESSION['user_type'])): ?>
         <?php
           $userType = $_SESSION['user_type'];
           switch ($userType) {
             case 'admin':
-              $dashboardLink = '../adminpage/home.php';
+              $dashboardLink = 'adminpage/home.php';
               break;
             case 'teacher':
-              $dashboardLink = '../teacherpage/home.php';
+              $dashboardLink = 'teacherpage/home.php';
               break;
             case 'student':
-              $dashboardLink = '../studentpage/home.php';
+              $dashboardLink = 'studentpage/home.php';
               break;
             case 'family':
-              $dashboardLink = '../familypage/home.php';
+              $dashboardLink = 'familypage/home.php';
               break;
             default:
               $dashboardLink = '#';
           }
         ?>
         <li><a href="<?= $dashboardLink ?>">Dashboard</a></li>
-        <li><a href="../adminpage/partials/logout.php">Logout</a></li>
+        <li><a href="adminpage/partials/logout.php">Logout</a></li>
       <?php else: ?>
-        <li><a href="login.php" class="<?= ($current_page == 'login.php') ? 'active' : '' ?>">Login</a></li>
+        <li><a href="homepage/login.php" class="<?= ($current_page == 'login.php') ? 'active' : '' ?>">Login</a></li>
       <?php endif; ?>
     </ul>
   </nav>
