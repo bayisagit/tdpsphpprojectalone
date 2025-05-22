@@ -81,10 +81,10 @@
       </div>
     </div>
 
-    <div class="map-section" style="margin-top: 50px; text-align: center;">
-      <h2 style="margin-bottom: 10px;">Our Location</h2>
-      <div class="map-container" style="display: flex; justify-content: center; align-items: center;">
-        <div id="map" style="width: 70%; height: 400px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"></div>
+    <div class="map-section" style="background-color: #cfd9d8; text-align: center;">
+      <h2 style="margin-bottom: 40px;">Our Location</h2>
+      <div class="map-container" style="display: flex; justify-content: center; align-items: center; padding-bottom: 50px;">
+        <div id="map" style="width: 70%; height: 400px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); "></div>
       </div>
     </div>
     <!-- Login and Video Section -->
@@ -104,8 +104,8 @@
             <label for="password">Password*</label><br>
             <input name="password" placeholder="Password" type="password" id="password" minlength="6" maxlength="9" required>
           </div>
-          <button type="button" class="btn" onclick="authorize()"><a href="login.php"> Sign In</a></button>
-          <p>Don't have an account? <a href="login.php">| Sign Up</a></p>
+          <button type="button" class="btn" onclick="authorize()"><a href="./homepage/login.php"> Sign In</a></button>
+          <p>Don't have an account? <a href="./homepage/login.php">| Sign Up</a></p>
         </form>
       </div>
       <div class="video">

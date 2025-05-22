@@ -2,11 +2,17 @@
     margin:0px;
     padding: 0px;
 }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
 main{
     width:100%;
+    flex: 1;
     text-align: center;
     background: rgb(240, 239, 239);
-    background: linear-gradient(to top,#cfd9d8,#cfd9d8), url("../../images/school-gcap.jpg");
+    background: linear-gradient(rgba(245, 247, 247, 0.7), rgba(231, 234, 233, 0.7)), url("../../images/school-gcap.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -17,7 +23,7 @@ main{
     padding: 14% 0px 20% 0px;
     font-size:70px;
     color:rgb(165, 196, 118);
-    z-index: 10px; 
+    z-index: 10; 
 }
 .img p,.img a{
     color: #102a90;
@@ -41,6 +47,7 @@ main{
 
   /*blog*/
 .blog_container{
+    background-color: #cfd9d8;
     width:100%;
     display: flex;
     gap:1%;
@@ -120,6 +127,7 @@ main{
     justify-content: space-around;
     background: whitesmoke;
     background-color: #cfd9d8;
+    padding-bottom: 40px;
 }
 
 .news{
@@ -133,7 +141,7 @@ background: white;
     width:100%;
     height:48vh;
 }
-.news image,.news .text{
+.news .image.news .text{
     
     color: black;
 }
@@ -146,8 +154,6 @@ transition: 1.2s;
 /*the last part*/
  .login_video{
     display:flex;
-    margin-top: 5%;
-    margin-bottom: 1%;
     width:100%;
     height: 60vh;
     background: whitesmoke;
@@ -157,12 +163,14 @@ transition: 1.2s;
 .login{
     width:45%;
     background-color: #eadfdf;
+    margin-bottom: 50px;
 }
 .video {
     width:55%;
      display: flex;
      justify-content: center;
      align-items: center;
+     margin-bottom: 50px;
 }
 .video video{
     width:100%;
@@ -170,8 +178,8 @@ transition: 1.2s;
 }
 .login form{
     width:75%;
-    margin:5%  ;
     background: whitesmoke;
+    margin-left: 5%;
     padding:3% 4% 10%;
     box-shadow:10px 0px 10px 0px #9e9c9c;
 }
